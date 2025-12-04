@@ -19,12 +19,8 @@ class Buku {
     public function create($data) {
         $sql = "INSERT INTO buku (judul, penulis, kategori, harga, stok, gambar) VALUES (?, ?, ?, ?, ?, ?)";
         $params = [
-            $data['judul'], 
-            $data['penulis'], 
-            $data['kategori'], 
-            $data['harga'], 
-            $data['stok'], 
-            $data['gambar']
+            $data['judul'], $data['penulis'], $data['kategori'], 
+            $data['harga'], $data['stok'], $data['gambar']
         ];
         return $this->db->query($sql, $params);
     }
